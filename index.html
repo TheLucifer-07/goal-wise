@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/welcome.css">
+    <link rel="stylesheet" href="css/goals.css">
+    <link rel="stylesheet" href="css/cal.css">
+    <link rel="stylesheet" href="css/succes.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Goal Wise</title>
+</head>
+<body>
+    <header class="headerclass" data-aos="fade-down">
+    <nav>
+    <h1>Goal Wise</h1>
+    <button class="menu-btn" onclick="menu()">☰</button>
+    </nav>
+    <div class="menu" id="menu">
+      <a href="#menu">Menu</a>
+      <a href="#goalCalculator">Goal Calculator</a>
+      <a href="#about">About us</a>
+      <a href="#contact">Contact us</a>
+    </div>
+    </header>
+    <div class="div1" data-aos="fade-up">
+        <h1 > Welcome to Goal Wise</h1>
+        <p>Your personal saving companion - set goals, track progress, and achieve your dreams faster. </p>
+        <div class="btn1"><a href="#goalCalculator" class="btn">Get Started</a></div>
+    </div>
+    <section id="about" class="about-section"> 
+    <div >
+    <h2>About Us</h2>
+    <p>
+      Welcome to <strong>GoalWise</strong> – your smart financial planning companion.  
+      We help you calculate and achieve your financial goals, whether it's buying gold,  
+      planning a vacation, or saving for your dream gadget.  
+    </p>
+    <p>
+      Our mission is to make financial planning simple, transparent,  
+      and achievable for everyone.
+    </p>
+  </div>
+    </section>
+    <section class= "section1" id="menu">
+        <h2> Set your goals</h2>
+        <div class="cards">
+             <article class="gold">
+            <img  class="image" src="images/gold.jpg" alt="gold" data-aos="fade-up">
+            <h4 data-aos="fade-up">Gold</h4>
+            <div class="card-footer" id="live-prices">
+            <div class="rating">
+                <img src="images/star.svg" alt="star">
+                <p class="price">4.9</p>
+            </div>
+            <p>&#8377;12,000 /g</p>
+            </div>
+        </article>
+             <article class="silver" >
+            <img class="image" src="images/silver.jpg" alt="silver" data-aos="fade-up">
+            <h4 data-aos="fade-up">Silver</h4>
+            <div class="card-footer" >
+            <div class="rating" id="live-prices">
+                <img src="images/star.svg" alt="star">
+                <p class="price">4.0</p>
+            </div>
+            <p>&#8377;1,30,000 /kg</p>
+            </div> 
+        </article>
+    
+             <article class="car">
+            <img  class="image" src="images/car-1.png" alt="car" data-aos="fade-up">
+            <h4 data-aos="fade-up">Car</h4>
+            <div class="card-footer">
+            <div class="rating">
+                <img src="images/star.svg" alt="star">
+                <p>4.5</p>
+            </div >
+            <p class="price">&#8377;10,00,000</p>
+            </div>
+        </article>
+        <article class="flat">
+            <img class="image" src="images/flat.jpg" alt="flat" data-aos="fade-up">
+            <h4 data-aos="fade-up">Apartment</h4>
+            <div class="card-footer">
+            <div class="rating">
+                <img src="images/star.svg" alt="star">
+                <p>4.6</p>
+            </div>
+            <p class="price">&#8377;50,00,000</p>
+            </div>
+        </article>
+        <article class="marriage">
+            <img class="image" src="images/laptop.jpg" alt="laptop" data-aos="fade-up">
+            <h4 data-aos="fade-up">Laptop</h4>
+            <div class="card-footer">
+            <div class="rating">
+                <img src="images/star.svg" alt="star">
+                <p>5.0</p>
+            </div>
+            <p class="price">&#8377;1,00,000</p>
+            </div>
+        </article>
+    </div>
+    </section>
+    <div class="container1" id="goalCalculator">
+        <div class="header" data-aos="fade-up" >
+            <h1 >Goal Calculator</h1>
+            <p class="subtitle">Calculate how much you need to save to reach your financial goals</p>
+        </div>
+
+        <div class="calculator-container" data-aos="slide-right">
+            <div class="input-section">
+                <h2 style="margin-bottom: 20px; color: #374151;">Set Your Goal</h2>
+                
+                <div class="form-group">
+                    <label for="goalName">Goal Name</label>
+                    <input type="text" id="goalName" placeholder="e.g., Buy Gold, Vacation, Gadget" value="Buy Gold">
+                </div>
+
+                <div class="form-group">
+                    <label for="targetAmount">Target Amount (₹)</label>
+                    <input type="number" id="targetAmount" placeholder="50000" value="50000">
+                </div>
+
+                <div class="form-group">
+                    <label for="timeframe">Timeframe</label>
+                    <select id="timeframe">
+                        <option value="6">6 Months</option>
+                        <option value="12">1 Year</option>
+                        <option value="18">1.5 Years</option>
+                        <option value="24">2 Years</option>
+                        <option value="36">3 Years</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="currentSavings">Current Savings (₹)</label>
+                    <input type="number" id="currentSavings" placeholder="0" value="5000">
+                </div>
+
+                <div class="form-group">
+                    <label for="monthlyIncome">Monthly Income (₹)</label>
+                    <input type="number" id="monthlyIncome" placeholder="50000" value="60000">
+                </div>
+
+                <button class="calculate-btn" onclick="calculateGoal()">Calculate My Goal</button>
+            </div>
+
+            <div class="result-section" data-aos="fade-up" >
+                <h2 style="margin-bottom: 20px; color: #374151;">Your Plan</h2>
+                
+                <div class="result-card">
+                    <div class="result-value" id="monthlyRequired">₹7,500</div>
+                    <div class="result-label">Monthly Savings Required</div>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill" style="width: 10%"></div>
+                </div>
+                <div style="text-align: center; margin-bottom: 20px; color: #6b7280;">
+                    <span id="progressText">10% Complete</span>
+                </div>
+
+                <div class="breakdown">
+                    <div class="breakdown-item">
+                        <span>Target Amount:</span>
+                        <span id="displayTarget">₹50,000</span>
+                    </div>
+                    <div class="breakdown-item">
+                        <span>Current Savings:</span>
+                        <span id="displayCurrent">₹5,000</span>
+                    </div>
+                    <div class="breakdown-item">
+                        <span>Amount Needed:</span>
+                        <span id="displayNeeded">₹45,000</span>
+                    </div>
+                    <div class="breakdown-item">
+                        <span>Timeframe:</span>
+                        <span id="displayTimeframe">6 months</span>
+                    </div>
+                    <div class="breakdown-item">
+                        <span>% of Income:</span>
+                        <span id="displayPercentage">12.5%</span>
+                    </div>
+                </div>
+
+                <div style="margin-top: 20px; padding: 15px; background: #f3f4f6; border-radius: 8px;">
+                    <h4 style="color: #374151; margin-bottom: 10px;">💡 Smart Tip</h4>
+                    <p style="color: #6b7280; font-size: 14px;" id="smartTip">
+                        This represents 12.5% of your monthly income. Consider setting up an automatic transfer to make saving effortless!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+     <div class="container" data-aos="slide-left">
+        <div class="success-icon"></div>
+        
+        <h1>Thank's for visiting GoalWise!</h1>
+        <p class="subtitle">Thank you for joining thousands of smart savers who are turning their dreams into reality with data-driven financial planning.</p>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <div class="feature-title">Smart Goal Setting</div>
+                <div class="feature-desc">Recommendations based on your income and spending patterns</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📈</div>
+                <div class="feature-title">Real-Time Tracking</div>
+                <div class="feature-desc">Live price monitoring for gold, gadgets, travel, and more</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <div class="feature-title">Auto-Save Magic</div>
+                <div class="feature-desc">Automated savings that adapt to your lifestyle and income</div>
+            </div>
+        </div>
+
+        <div id="contact" class="next-steps">
+            <h3>What's Next?</h3>
+            <ul class="steps-list">
+                <li>Check your email for account activation</li>
+                
+                <li>Set your first financial goal</li>
+               
+                <li>Start your journey to financial freedom!</li>
+            </ul>
+        </div>
+
+        <div>
+            <a class="btn-primary">Subscribe</a>
+            <a href="#goalCalculator" class="btn-secondary" >Try Calculator</a>
+        </div>
+
+        <div class="footer-note">
+            <p>🔒 Your financial data is encrypted and secure</p>
+            <p>Questions? Contact our support team at hello@goalwise.com</p>
+        </div>
+    </div>
+    <script>
+        function menu(){
+            document.getElementById("menu").classList.toggle("show");
+        }
+        function calculateGoal() {
+            
+            const goalName = document.getElementById('goalName').value;
+            const targetAmount = parseFloat(document.getElementById('targetAmount').value) || 0;
+            const timeframe = parseFloat(document.getElementById('timeframe').value) || 6;
+            const currentSavings = parseFloat(document.getElementById('currentSavings').value) || 0;
+            const monthlyIncome = parseFloat(document.getElementById('monthlyIncome').value) || 0;
+
+          
+            const amountNeeded = targetAmount - currentSavings;
+            const monthlyRequired = amountNeeded / timeframe;
+            const percentageOfIncome = monthlyIncome > 0 ? (monthlyRequired / monthlyIncome) * 100 : 0;
+            const progressPercentage = targetAmount > 0 ? (currentSavings / targetAmount) * 100 : 0;
+
+           
+            document.getElementById('monthlyRequired').textContent = `₹${monthlyRequired.toLocaleString('en-IN', {maximumFractionDigits: 0})}`;
+            document.getElementById('displayTarget').textContent = `₹${targetAmount.toLocaleString('en-IN')}`;
+            document.getElementById('displayCurrent').textContent = `₹${currentSavings.toLocaleString('en-IN')}`;
+            document.getElementById('displayNeeded').textContent = `₹${amountNeeded.toLocaleString('en-IN')}`;
+            document.getElementById('displayTimeframe').textContent = `${timeframe} months`;
+            document.getElementById('displayPercentage').textContent = `${percentageOfIncome.toFixed(1)}%`;
+
+            document.getElementById('progressFill').style.width = `${Math.min(progressPercentage, 100)}%`;
+            document.getElementById('progressText').textContent = `${progressPercentage.toFixed(1)}% Complete`;
+
+
+            
+            let tip = "";
+            if (percentageOfIncome < 10) {
+                tip = "Great! This is a very manageable amount. Consider investing the savings for better returns.";
+            } else if (percentageOfIncome < 20) {
+                tip = "This is a reasonable saving goal. Set up automatic transfers to stay on track.";
+            } else if (percentageOfIncome < 30) {
+                tip = "This is ambitious but achievable. Consider extending the timeframe or increasing your income.";
+            } else {
+                tip = "This might be challenging. Consider extending your timeline or exploring additional income sources.";
+            }
+            document.getElementById('smartTip').textContent = tip;
+        }
+
+       
+        calculateGoal();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 2000,
+            offset: 100,
+        });
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,111 @@
+
+.section1{
+    font-size: 10px;
+    font-family:Helvetica;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100vw;                
+    min-height: 80vh
+
+}
+.section1 article{
+    padding: 38px;
+    width: 260px; 
+    height: 270px;
+    padding:24px;
+    flex-shrink: 1;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 36px;
+    background-color:aliceblue;
+    border: 1px solid rgba(188, 207, 221, 0.2) inset;
+    padding-top: 20px;
+}
+.image{
+    width:110px;
+    height:84px;
+    object-fit: contain;
+}
+.section1 article p{
+    font-size: 20px;
+    font-weight: 300;
+    font-family:Helvetica;
+}
+.rating{
+     display:flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 8px 0;
+    gap:6px;
+}
+.rating img{
+    width:20px;
+    height:20px;
+    object-fit: contain;
+}
+.rating p{
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+    font-family:  Helvetica;
+}
+.cards{
+    display:flex;
+    flex-direction: row;
+    gap:36px;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding:20px;
+    padding-top:20px;
+    
+}
+.card-footer {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%;
+    margin-top: 8px;
+}
+.price {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: Helvetica;
+    
+}
+article h4{
+    font-size: 40px;
+    font-family: Helvetica;
+}
+.section1 h2{
+    font-size: 50px;
+    font-weight: 600;
+    font-family: Helvetica;
+    flex:1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+@media (max-width: 768px) {
+    .cards {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .section1 article {
+        width: 90%;
+        max-width: 300px;
+        height: auto;
+    }
+    article h4 {
+        font-size: 24px;
+    }
+    .section1 h2 {
+        font-size: 32px;
+    }
+}
