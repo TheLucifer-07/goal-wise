@@ -153,6 +153,7 @@ body{
     .div1 {
         min-height: 60vh;
         padding: 20px;
+        margin-top:35vh;
     }
     .div1 h1 {
         font-size: 28px;
